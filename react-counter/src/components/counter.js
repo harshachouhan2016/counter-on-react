@@ -24,10 +24,18 @@ const Counter = () => {
 
   return (
     <div>
-      <h2>Counter: {count}</h2>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
-      <button onClick={reset}>Reset</button>
+      <button onClick={increment} className="border border-white text-white px-4 py-2 rounded">
+        +
+      </button>
+      <span className="text-white px-4 py-2 rounded mx-2">
+        {count}
+      </span>
+      <button onClick={decrement} className="border border-white text-white px-4 py-2 rounded">
+        -
+      </button>
+      <button onClick={reset} className="bg-white text-violet-950 px-4 py-2 rounded ml-5">
+        Reset
+      </button>
     </div>
   );
 };

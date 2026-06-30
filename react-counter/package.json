@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "tailwind": "npx tailwindcss -i src/input.css -o src/output.css --watch",
+    "build": "npx tailwindcss -i src/input.css -o src/output.css && react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
@@ -40,6 +41,12 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "@tailwindcss/cli": "^4.3.1",
+    "@tailwindcss/postcss": "^4.3.1",
+    "autoprefixer": "^10.5.2",
+    "concurrently": "^10.0.3",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^3.4.19"
   }
 }
